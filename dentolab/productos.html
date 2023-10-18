@@ -22,27 +22,39 @@
         }
 
     </script>
-    <main class="mx-4 py-3">
-
-        <section>
+    <main class="mx-3 mx-md-4 py-3">
+        <section class="main-container">
             <h1>Catálogo de productos</h1>
-            <div class="row pt-4">
+            <div class="d-flex flex-column flex-md-row gap-3 gap-md-0 mt-4">
                 <div class="col">
-                    <div class="d-flex flex-row gap-3">
-                        <input type="text" class="form-control w-100" value="" name="codigo" placeholder="Busqueda" />
-                        <a data-bs-toggle="offcanvas" href="#filterCanva" role="button" aria-controls="filterCanva"
-                            class="btn btn-secondary d-flex flex-row align-items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-filter" viewBox="0 0 16 16">
-                                <path
-                                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                            </svg>
-                            Filtrar
-                        </a>
+                    <a href="nuevo-producto.html" class="btn btn-primary text-nowrap d-flex flex-row align-items-center gap-2" style="width:fit-content;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        Nuevo producto
+                    </a>
+                </div>
+                <div class="col col-md-8 d-flex flex-row gap-3 pt-md-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Busqueda" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-end pt-3">
+            <div class="d-flex flex-row justify-content-between pt-3">
+                <a data-bs-toggle="offcanvas" href="#filterCanva" role="button" aria-controls="filterCanva"
+                    class="btn btn-secondary d-flex flex-row align-items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filter" viewBox="0 0 16 16">
+                        <path
+                            d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                    Filtrar
+                </a>
                 <div class="d-flex flex-row align-items-center gap-3">
                     <label>Ordernar</label>
                     <button onclick="orderList(true)" type="button"
@@ -52,7 +64,9 @@
                             <path fill-rule="evenodd"
                                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                         </svg>
-                        Lista
+                        <span class="d-none d-md-flex">
+                            Lista
+                        </span>
                     </button>
                     <button onclick="orderList(false)" type="button"
                         class="btn btn-secondary d-flex flex-row align-items-center gap-2">
@@ -61,128 +75,135 @@
                             <path
                                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                         </svg>
-                        Cuadricula
+                        <span class="d-none d-md-flex">
+                            Cuadricula
+                        </span>
                     </button>
                 </div>
             </div>
-            <div class="row row-cols-1" id="cards-products">
+            <div class="row">
                 <div class="col">
-                    <div class="border rounded p-3 my-3">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
-                                <img src="https://placehold.co/300x300" class="img-fluid img-product" />
-                                <div class="d-flex flex-column">
-                                    <label>Nombre</label>
-                                    <h3>Corona metal cerámica</h3>
-                                    <div class="d-flex flex-row align-items-center gap-4">
-                                        <div>
-                                            <label>Categoria</label>
-                                            <h5>Prótesis fija</h5>
-                                        </div>
-                                        <div>
-                                            <label>Código</label>
-                                            <h5>104</h5>
+                    <div class="row row-cols-1" id="cards-products">
+                        <div class="col pt-3">
+                            <div class="border rounded p-3 my-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Corona metal cerámica</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pt-3 pt-sm-0">
-                                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                                    role="button" aria-controls="offcanvasExample">
-                                    Editar
-                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border rounded p-3 my-3">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
-                                <img src="https://placehold.co/300x300" class="img-fluid img-product" />
-                                <div class="d-flex flex-column">
-                                    <label>Nombre</label>
-                                    <h3>Mantenedor de espacio C/U</h3>
-                                    <div class="d-flex flex-row align-items-center gap-4">
-                                        <div>
-                                            <label>Categoria</label>
-                                            <h5>Prótesis fija</h5>
-                                        </div>
-                                        <div>
-                                            <label>Código</label>
-                                            <h5>104</h5>
+                        <div class="col">
+                            <div class="border rounded p-3 my-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Mantenedor de espacio C/U</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pt-3 pt-sm-0">
-                                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                                    role="button" aria-controls="offcanvasExample">
-                                    Editar
-                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border rounded p-3 my-3">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
-                                <img src="https://placehold.co/300x300" class="img-fluid img-product" />
-                                <div class="d-flex flex-column">
-                                    <label>Nombre</label>
-                                    <h3>Prótesis flexible (Valplast)</h3>
-                                    <div class="d-flex flex-row align-items-center gap-4">
-                                        <div>
-                                            <label>Categoria</label>
-                                            <h5>Prótesis fija</h5>
-                                        </div>
-                                        <div>
-                                            <label>Código</label>
-                                            <h5>104</h5>
+                        <div class="col">
+                            <div class="border rounded p-3 my-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Prótesis flexible (Valplast)</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pt-3 pt-sm-0">
-                                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                                    role="button" aria-controls="offcanvasExample">
-                                    Editar
-                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border rounded p-3 my-3">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
-                                <img src="https://placehold.co/300x300" class="img-fluid img-product" />
-                                <div class="d-flex flex-column">
-                                    <label>Nombre</label>
-                                    <h3>Plano de relajación estampado</h3>
-                                    <div class="d-flex flex-row align-items-center gap-4">
-                                        <div>
-                                            <label>Categoria</label>
-                                            <h5>Prótesis fija</h5>
-                                        </div>
-                                        <div>
-                                            <label>Código</label>
-                                            <h5>104</h5>
+                        <div class="col">
+                            <div class="border rounded p-3 my-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Plano de relajación estampado</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pt-3 pt-sm-0">
-                                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                                    role="button" aria-controls="offcanvasExample">
-                                    Editar
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
@@ -289,25 +310,33 @@
             </div>
         </div>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="filterCanva" aria-labelledby="filterCanvaLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="filterCanva" aria-labelledby="filterCanva">
             <div class="offcanvas-header">
-                <h4 class="offcanvas-title" id="filterCanva">Filtros</h4>
+                <h5 class="offcanvas-title" id="filterCanva">Filtros</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body pt-0">
-                <div class="col mt-3">
-                    <div class="d-flex flex-column">
-                        <label class="col-form-label">Tipo de producto</label>
-                        <select class="form-select" name="tpprod">
-                            <option value="0">Seleccione el tipo</option>
-                            <option value="1">Materia Prima</option>
-                            <option value="2">Semi Elaborado</option>
-                            <option value="3">Producto Terminado</option>
-                            <option value="4">Material de Envase</option>
-                            <option value="5">Máquina</option>
-                            <option value="6">Equipo</option>
-                            <option value="7">Utensilio</option>
-                        </select>
+            <div class="offcanvas-body">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Tipo de producto
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-column gap-3">
+                                    <button class="btn btn-secondary">Materia Prima</button>
+                                    <button class="btn btn-secondary">Semi Elaborado</button>
+                                    <button class="btn btn-secondary">Producto Terminado</button>
+                                    <button class="btn btn-secondary">Material de Envase</button>
+                                    <button class="btn btn-secondary">Máquina</button>
+                                    <button class="btn btn-secondary">Equipo</button>
+                                    <button class="btn btn-secondary">Utensilio</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
