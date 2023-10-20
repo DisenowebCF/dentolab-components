@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="mx-3 mx-md-4 py-3">
+        <section class="main-container">
+            <h1>Nuevo producto</h1>
+            <div class="row row-cols-1 row-cols-md-2 pt-4">
+                <div class="col pb-3">
+                    <label class="form-label">Codigo</label>
+                    <input type="text" class="form-control" value="" name="codigo" placeholder="Código">
+                </div>
+
+                <div class="col pb-3">
+                    <label class="form-label">Producto</label>
+                    <input type="text" class="form-control" value="" name="producto" placeholder="Producto">
+                </div>
+                <div class="col pb-3">
+                    <label class="form-label">Tipo de unidad</label>
+                    <select class="form-select" name="un">
+                        <option value="0">Seleccione un tipo de unidad</option>
+                        <option value="1">Unidad</option>
+                        <option value="2">Precio</option>
+                        <option value="3">Longitud</option>
+                        <option value="4">Área</option>
+                        <option value="5">Volúmen</option>
+                        <option value="6">Peso</option>
+                        <option value="7">Tiempo</option>
+                        <option value="8">Volúmen</option>
+                    </select>
+                </div>
+                <div class="col pb-3">
+                    <label class="col-0 form-label">Categoría</label>
+                    <select class="form-select" name="cat">
+                        <option value="0">Seleccione un categoría</option>
+                        <option value="1">PRÓTESIS FIJA</option>
+                        <option value="2">OPERATORIA</option>
+                        <option value="3">IMPLANTES</option>
+                        <option value="4">PROTESIS REMOVIBLE</option>
+                        <option value="5">ORTODONCIA</option>
+                        <option value="6">REPARACIONES</option>
+                        <option value="7">PLANOS DE RELAJACIÓN</option>
+                        <option value="8">OTRO</option>
+                    </select>
+                </div>
+                <div class="col pb-3">
+                    <label class="form-label">Tipo de producto</label>
+                    <select class="form-select" name="tpprod">
+                        <option value="0">Seleccione el tipo</option>
+                        <option value="1">Materia Prima</option>
+                        <option value="2">Semi Elaborado</option>
+                        <option value="3">Producto Terminado</option>
+                        <option value="4">Material de Envase</option>
+                        <option value="5">Máquina</option>
+                        <option value="6">Equipo</option>
+                        <option value="7">Utensilio</option>
+                    </select>
+                </div>
+                <div class="col pb-3">
+                    <label class="col-0 form-label">Precio de compra</label>
+                    <input type="text" class="form-control" value="" name="pcompra" placeholder="pcompra">
+                </div>
+                <div class="col pb-3">
+                    <label class="col-0 form-label">Precio de venta</label>
+                    <input type="text" class="form-control" value="" name="pventa" placeholder="pventa">
+                </div>
+            </div>
+            <div class="col pt-4">
+                <div class="d-flex flex-column-reverse flex-md-row gap-3 justify-content-md-end">
+                    <a href="productos.html" class="btn btn-secondary">Volver</a>
+                    <button class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
