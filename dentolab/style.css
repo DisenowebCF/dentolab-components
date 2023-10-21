@@ -59,6 +59,17 @@ th{
   border: 2px solid #25a168;
 }
 
+.btn:focus {
+  background-color: #bce6fa;
+  color: #ffffff;
+  border: 2px solid #50acd6;
+}
+.btn:hover {
+  background-color: #d3f2ff;
+  color: #494949;
+  border: 2px solid #494949;
+}
+
 @media only screen and (max-width: 425px) {
   .img-product {height: 100%;width: auto;}
 }
