@@ -13,6 +13,22 @@
     <main class="mx-3 mx-md-4 py-3">
         <section class="main-container">
             <h1>Nuevo producto</h1>
+            <div class="d-flex justify-content-center">
+                <ul class="d-flex flex-row list-unstyled gap-5 stepper-lines">
+                    <li class="d-flex flex-column align-items-center w-75">
+                        <p class="bg-primary text-white rounded-circle px-3 py-2">1</p>
+                        <small class="text-center">Información del producto</small>
+                    </li>
+                    <li class="d-flex flex-column align-items-center w-75">
+                        <p class="bg-dark-subtle text-secondary rounded-circle px-3 py-2">2</p>
+                        <small class="text-center">Categoria y precio</small>
+                    </li>
+                    <li class="d-flex flex-column align-items-center w-75">
+                        <p class="bg-dark-subtle text-secondary rounded-circle px-3 py-2">3</p>
+                        <small class="text-center">Finalizar</small>
+                    </li>
+                </ul>
+            </div>
             <div class="row row-cols-1 row-cols-md-2 pt-4">
                 <div class="col pb-3">
                     <label class="form-label">Codigo</label>
@@ -37,46 +53,11 @@
                         <option value="8">Volúmen</option>
                     </select>
                 </div>
-                <div class="col pb-3">
-                    <label class="col-0 form-label">Categoría</label>
-                    <select class="form-select" name="cat">
-                        <option value="0">Seleccione un categoría</option>
-                        <option value="1">PRÓTESIS FIJA</option>
-                        <option value="2">OPERATORIA</option>
-                        <option value="3">IMPLANTES</option>
-                        <option value="4">PROTESIS REMOVIBLE</option>
-                        <option value="5">ORTODONCIA</option>
-                        <option value="6">REPARACIONES</option>
-                        <option value="7">PLANOS DE RELAJACIÓN</option>
-                        <option value="8">OTRO</option>
-                    </select>
-                </div>
-                <div class="col pb-3">
-                    <label class="form-label">Tipo de producto</label>
-                    <select class="form-select" name="tpprod">
-                        <option value="0">Seleccione el tipo</option>
-                        <option value="1">Materia Prima</option>
-                        <option value="2">Semi Elaborado</option>
-                        <option value="3">Producto Terminado</option>
-                        <option value="4">Material de Envase</option>
-                        <option value="5">Máquina</option>
-                        <option value="6">Equipo</option>
-                        <option value="7">Utensilio</option>
-                    </select>
-                </div>
-                <div class="col pb-3">
-                    <label class="col-0 form-label">Precio de compra</label>
-                    <input type="text" class="form-control" value="" name="pcompra" placeholder="pcompra">
-                </div>
-                <div class="col pb-3">
-                    <label class="col-0 form-label">Precio de venta</label>
-                    <input type="text" class="form-control" value="" name="pventa" placeholder="pventa">
-                </div>
             </div>
             <div class="col pt-4">
                 <div class="d-flex flex-column-reverse flex-md-row gap-3 justify-content-md-end">
                     <a href="productos.html" class="btn btn-secondary">Volver</a>
-                    <button class="btn btn-primary">Guardar</button>
+                    <a class="btn btn-primary" href="nuevo-producto-paso-2.html">Continuar</a>
                 </div>
             </div>
         </section>
