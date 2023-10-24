@@ -1,0 +1,364 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <script>
+
+        function orderList(isList) {
+            var listProducts = document.getElementById("cards-products")
+            if (isList) {
+                listProducts.className = "row row-cols-1"
+            } else {
+                listProducts.className = "row row-cols-2"
+            }
+        }
+
+    </script>
+    <main class="mx-3 mx-md-4 py-3">
+        <section class="main-container">
+            <h1>Catálogo de productos</h1>
+            <div class="d-flex flex-column flex-md-row gap-3 gap-md-0 mt-4">
+                <div class="col">
+                    <a href="nuevo-producto.html"
+                        class="btn btn-primary text-nowrap d-flex flex-row align-items-center gap-2"
+                        style="width:fit-content;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        Nuevo producto
+                    </a>
+                </div>
+                <div class="col col-md-8 d-flex flex-row gap-3 pt-md-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Busqueda" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between pt-3">
+                <a data-bs-toggle="offcanvas" href="#filterCanva" role="button" aria-controls="filterCanva"
+                    class="btn btn-secondary d-flex flex-row align-items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filter" viewBox="0 0 16 16">
+                        <path
+                            d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                    Filtrar
+                </a>
+                <div class="d-flex flex-row align-items-center gap-3">
+                    <label>Ordernar</label>
+                    <button onclick="orderList(true)" type="button"
+                        class="btn btn-secondary d-flex flex-row align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-list text-white" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <span class="d-none d-md-flex">
+                            Lista
+                        </span>
+                    </button>
+                    <button onclick="orderList(false)" type="button"
+                        class="btn btn-secondary d-flex flex-row align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-grid text-white" viewBox="0 0 16 16">
+                            <path
+                                d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                        </svg>
+                        <span class="d-none d-md-flex">
+                            Cuadricula
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pt-3">
+                    <div class="row row-cols-1" id="cards-products">
+                        <div class="col">
+                            <div class="border rounded p-3 mb-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Corona metal cerámica</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border rounded p-3 mb-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Mantenedor de espacio C/U</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border rounded p-3 mb-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Prótesis flexible (Valplast)</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border rounded p-3 mb-3">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                                        <img src="https://placehold.co/300x300" class="img-fluid img-product" />
+                                        <div class="d-flex flex-column">
+                                            <label>Nombre</label>
+                                            <h3>Plano de relajación estampado</h3>
+                                            <div class="d-flex flex-row align-items-center gap-4">
+                                                <div>
+                                                    <label>Categoria</label>
+                                                    <h5>Prótesis fija</h5>
+                                                </div>
+                                                <div>
+                                                    <label>Código</label>
+                                                    <h5>104</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3 pt-sm-0">
+                                        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                            role="button" aria-controls="offcanvasExample">
+                                            Editar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="offcanvasExampleLabel">Ficha de producto</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <div class="column pb-5 mb-5">
+                    <div>
+                        <input type="hidden" class="form-control" value="" name="idproducto" id="idproducto">
+                    </div>
+                    <div class="d-flex">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label">ID</label>
+                                <input type="text" class="form-control" value="" name="idp" id="idp" placeholder="ID"
+                                    disabled="true" />
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Codigo</label>
+                                <input type="text" class="form-control" value="" name="codigo" placeholder="Código">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column">
+                        <label class="form-label">Producto</label>
+                        <input type="text" class="form-control" value="" name="producto" placeholder="Producto">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label class="form-label">Tipo de unidad</label>
+                        <select class="form-select" name="un">
+                            <option value="0">Seleccione un tipo de unidad</option>
+                            <option value="1">Unidad</option>
+                            <option value="2">Precio</option>
+                            <option value="3">Longitud</option>
+                            <option value="4">Área</option>
+                            <option value="5">Volúmen</option>
+                            <option value="6">Peso</option>
+                            <option value="7">Tiempo</option>
+                            <option value="8">Volúmen</option>
+                        </select>
+                    </div>
+                    <div class="d-flex">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="col-0 form-label">Categoría</label>
+                                <select class="form-select" name="cat">
+                                    <option value="0">Seleccione un categoría</option>
+                                    <option value="1">PRÓTESIS FIJA</option>
+                                    <option value="2">OPERATORIA</option>
+                                    <option value="3">IMPLANTES</option>
+                                    <option value="4">PROTESIS REMOVIBLE</option>
+                                    <option value="5">ORTODONCIA</option>
+                                    <option value="6">REPARACIONES</option>
+                                    <option value="7">PLANOS DE RELAJACIÓN</option>
+                                    <option value="8">OTRO</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Tipo de producto</label>
+                                <select class="form-select" name="tpprod">
+                                    <option value="0">Seleccione el tipo</option>
+                                    <option value="1">Materia Prima</option>
+                                    <option value="2">Semi Elaborado</option>
+                                    <option value="3">Producto Terminado</option>
+                                    <option value="4">Material de Envase</option>
+                                    <option value="5">Máquina</option>
+                                    <option value="6">Equipo</option>
+                                    <option value="7">Utensilio</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label class="col-0 form-label">Precio de compra</label>
+                        <input type="text" class="form-control" value="" name="pcompra" placeholder="pcompra">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label class="col-0 form-label">Precio de venta</label>
+                        <input type="text" class="form-control" value="" name="pventa" placeholder="pventa">
+                    </div>
+                    <div class="block pt-3">
+                        <div class="alert alert-success" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-check-circle text-success" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                            </svg>
+                            Cambios guardados con éxito
+                        </div>
+                    </div>
+                </div>
+                <div class="position-absolute bottom-0 end-0 w-100 bg-white p-3">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Guardar</button>
+                        <button class="btn btn-secondary" type="button" data-bs-dismiss="offcanvas"
+                            aria-label="Close">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="filterCanva" aria-labelledby="filterCanva">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="filterCanva">Filtros</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Tipo de producto
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-column gap-3">
+                                    <button class="btn btn-secondary">Materia Prima</button>
+                                    <button class="btn btn-secondary">Semi Elaborado</button>
+                                    <button class="btn btn-secondary">Producto Terminado</button>
+                                    <button class="btn btn-secondary">Material de Envase</button>
+                                    <button class="btn btn-secondary">Máquina</button>
+                                    <button class="btn btn-secondary">Equipo</button>
+                                    <button class="btn btn-secondary">Utensilio</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
