@@ -1,0 +1,229 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orden de Tabajo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="mx-3 mx-md-4 my-2 py-3">
+        <h1 class="my-4 text-center fw-bold">Orden de trabajo</h1>
+        <section class="main-container">
+            <div class="card mx-md-5 p-md-4 shadow-lg">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-md-6 my-md-6 mx-4 my-2">
+                            <label class="form-label">Categorías</label>
+                            <select class=" form-select" name="selcategoriaSelect" id="selectCategoria">
+                                <option value="0">Protesis removible</option>
+                                <option value="1">Implantes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6  my-md-6 mx-4 my-2">
+                            <label class="form-label">Producto</label>
+                            <select class="form-select" name="selectProducto" id="selectProducto">
+                                <option value="0">Estructura ADMODUM X IMPLANTE</option>
+                                <option value="1">Placa de altura</option>
+                            </select>
+                        </div>
+                        <div class="col my-md-6 mx-4 my-2 mt-2">
+                            <button class="btn btn-calendario" type="button" id="">Calendario</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-6  my-md-6 mx-4 my-2">
+                            <label class="form-label">Doctor</label>
+                            <select class=" form-select" name="selectDoctor" id="selectDoctor">
+                                <option value="0">doctor 1</option>
+                                <option value="1">N lenguas</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6  my-md-6 mx-4 my-2">
+                            <label class="col-0 form-label">Ingrese ID de orden</label>
+                            <input type="text" class="form-control" value="" name="ingresarOrden"
+                                placeholder="Ingresar orden" data-bs-toggle="modal" data-bs-target="#modalCalendario">
+                            </input>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 my-md-6 mx-4 my-2 mt-2">
+                                <input class="btn btn-buscar w-100" type="button" value="Buscar">
+                            </div>
+                            <div class="col-4 my-md-6 mx-4 my-2 mt-2">
+                                <input class="btn btn-limpiar w-100" type="button" value="Limpiar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-top">
+                    <button type="button" class="btn btn-nuevaOrden m-4" data-bs-toggle="modal"
+                        data-bs-target="#modalOrden">Nueva orden</button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="modalOrden" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Orden de trabajo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="row mx-2 my-2 d-flex gap-2">
+                                <label class="col form-label ">ID</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">001</option>
+
+                                </select>
+                            </div>
+                            <div class="row mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label ">Doctor</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label ">Paciente</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label ">Clínica</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label ">Direcciones</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row my mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label ">Categoría</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row my mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label ">Producto</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row my mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label ">Etapas</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row my mx-2 my-2 d-flex gap-2 w-100">
+                                <label class="col form-label col">Etapas</label>
+                                <select class="col form-select w-75" name="categoriaSelect" id="categoriaDoctor">
+                                    <option value="0">doctor 1</option>
+                                    <option value="1">N lenguas</option>
+                                </select>
+                            </div>
+                            <div class="row  my-md-6 mx-2 my-2 d-flex">
+                                <label class="col form-label">Observaciones</label>
+                                <textarea class="form-control w-75 col" id="exampleFormControlTextarea1"
+                                    rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary w-50 mx-auto">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Registros -->
+            <div class="card mx-md-5 p-md-4 mt-5 card-content shadow-lg">
+                <div class="card-scroll">
+                    <table class="table table-bordered">
+                        <thead class="table-header">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Fecha Origen</th>
+                                <th scope="col">Fecha programada</th>
+                                <th scope="col">Doctor</th>
+                                <th scope="col">Paciente</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Orden</th>
+                                <th scope="col">Pago</th>
+                                <th scope="col">Bloqueado</th>
+                                <th scope="col">Informado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>05-10-2022</td>
+                                <td>05-10-2022</td>
+                                <td>Dr.Martinez</td>
+                                <td>Ivan Lagos</td>
+                                <td>PROTESIS REMOVIBLE </td>
+                                <td>ESTRUCTURA ADMODUM X IMPLANTE</td>
+                                <td>0</td>
+                                <td><input class="btn link-underline-dark fw-bold text-decoration-underline"
+                                        type="button" value="Ver"></td>
+                                <td><input class="btn btn-success fw-bold" type="button" value="Pagar"></td>
+                                <td class="fw-bold">SI</td>
+                                <td class="fw-bold">SI</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>05-10-2022</td>
+                                <td>05-10-2022</td>
+                                <td>Dr.Martinez</td>
+                                <td>Ivan Lagos</td>
+                                <td>PROTESIS REMOVIBLE </td>
+                                <td>ESTRUCTURA ADMODUM X IMPLANTE</td>
+                                <td>0</td>
+                                <td><input class="btn link-underline-dark fw-bold text-decoration-underline"
+                                        type="button" value="Ver"></td>
+                                <td><input class="btn btn-success fw-bold" type="button" value="Pagar"></td>
+                                <td class="fw-bold">SI</td>
+                                <td class="fw-bold">SI</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>05-10-2022</td>
+                                <td>05-10-2022</td>
+                                <td>Dr.Martinez</td>
+                                <td>Ivan Lagos</td>
+                                <td>PROTESIS REMOVIBLE</td>
+                                <td>ESTRUCTURA ADMODUM X IMPLANTE</td>
+                                <td>0</td>
+                                <td><input class="btn link-underline-dark fw-bold text-decoration-underline"
+                                        type="button" value="Ver"></td>
+                                <td><input class="btn btn-success fw-bold" type="button" value="Pagar"></td>
+                                <td class="fw-bold">SI</td>
+                                <td class="fw-bold">NO</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
