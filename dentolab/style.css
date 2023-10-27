@@ -51,7 +51,7 @@ th {
 }
 
 
-.btn-buscar {
+.btn-buscar, .btn-editar {
   background-color: #e2b579;
   color: #ffffff;
   border: 2px solid #9c5757;
@@ -63,14 +63,19 @@ th {
   border: 2px solid #5e3930;
 }
 
-.btn-calendario {
+.btn-calendario, .btn-basico {
   background-color: #ffffff;
   color: #92361f;
-
   border: 2px solid #92361f;
 }
 
-.btn-nuevaOrden {
+.btn-neutro {
+  background-color: #111111;
+  color: #ffffff;
+  border: 2px solid #494949;
+}
+
+.btn-continuar, .btn-nuevo {
   background-color: #35df90;
   color: #ffffff;
   border: 2px solid #25a168;
@@ -115,7 +120,7 @@ th {
   border: 1px solid rgb(187 187 187);
   border-radius: 19%;
   overflow: hidden;
-  left: 74%;
+  left: 60%;
   bottom: 79%;
 }
 
@@ -135,15 +140,28 @@ th {
   scroll-behavior: smooth;
 }
 
+.page-link{
+  color: #111111;
+}
 @media only screen and (max-width: 425px) {
   .img-product {
     height: 100%;
     width: auto;
   }
+  .stepper-lines li:not(:last-child):after {
+    width: 20px;
+    height: 3px;
+    background-color: rgb(187 187 187);
+    position: relative;
+    content: "";
+    border: 1px solid rgb(187 187 187);
+    border-radius: 19%;
+    overflow: hidden;
+    left: 60%;
+    bottom: 79%;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-  .main-container {
-    width: 1204px;
-  }
+
 }
